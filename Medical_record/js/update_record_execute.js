@@ -50,7 +50,7 @@ async function updateMedicalRecord() {
 
 
 window.addEventListener('load', async () => {
-	if (window.location.href.includes('submit')) {
+	if (window.location.href.includes('&')) {
 		const medicalRecord = JSON.parse(localStorage.getItem('medicalRecord'));
 		console.log(medicalRecord);
 		localStorage.removeItem('medicalRecord');
