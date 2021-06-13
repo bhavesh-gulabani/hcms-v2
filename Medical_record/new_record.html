@@ -13,7 +13,7 @@
 	<div class="grid min-h-screen place-items-center">
 		<div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
 		  <h1 class="text-xl font-semibold">To create a new record, <span class="font-normal">please fill in the following information</span></h1>
-		  <form class="mt-6" id="form" onsubmit="addMedicalRecord()" action="new_record.html?submit=true" method="POST">
+		  <form class="mt-6" id="form" onsubmit="addMedicalRecord()" action="new_record.html?submit=true">
 			<label for="patientid" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Patient ID</label>
 			<input id="patientid" name="pat_id" type="number" placeholder="2001" autocomplete="patientid" min="2000" max="2999" class="rounded-md block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
 			<label for="doc_id" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Doctor ID</label>
