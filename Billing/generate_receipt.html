@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generate Receipt</title>
+	<link rel="stylesheet" type="text/css" href="../css/tailwind.css">
+
+</head>
+<body>
+
+	<header class="flex items-center justify-center relative pt-10">
+		<h1 class="text-6xl text-blue-700 font-semibold">Generate Receipt</h1>
+	</header>
+
+	<div class="grid min-h-screen place-items-center">
+		<div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
+		  <h1 class="text-xl font-semibold">To Generate Receipt, <span class="font-normal">please fill in the following information</span></h1>
+		  <form class="mt-6" onsubmit="generateReceipt()" method="POST" action="generate_receipt.html?submit=true">
+			<label for="patient_id" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Patient ID</label>
+			<input id="patientid" name="patient_id" type="number" placeholder="2000" autocomplete="patientid" min="2000" max="2999" class="rounded-md block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+			<div class="mt-2 flex justify-between gap-3">
+			  <span class="w-1/2">
+				<label for="Mode_of_payment" class="block text-xs font-semibold text-gray-600 uppercase">Mode of Payment</label>
+				<input id="Mode_of_payment" type="text" name="Mode_of_payment" placeholder="Cash" pattern = "[a-zA-Z]+" autocomplete="given-name" class="rounded-md block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+			  </span>
+			  <span class="w-1/2">
+				<label for="Amount" class="block text-xs font-semibold text-gray-600 uppercase">Amount</label>
+			  <input id="Amount" type="number" name="Amount" placeholder="Amount" autocomplete="family-name" class="rounded-md block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+			  </span>
+			</div>
+			<label for="Status" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Status</label>
+			<input id="Status" type="text" name="Status" placeholder="Paid" autocomplete="" class="rounded-md block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+			<input type="submit" class="rounded-md w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-blue-700 shadow-lg focus:outline-none hover:bg-blue-900 hover:shadow-none" value="Generate" style="cursor: pointer">
+			
+			<input type="reset" class="rounded-md cursor-pointer w-full py-3 mt-6 font-medium tracking-widest text-blue-700 uppercase bg-white shadow-lg focus:outline-none hover:bg-gray-50">
+		  </form>
+		  <div class="text-3xl text-center pt-16">
+			<a href="billing.html">Back</a>
+		</div>
+		</div>
+		
+	  </div>
+
+	<script type="text/javascript" src="js/generate_receipt.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
