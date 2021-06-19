@@ -7,6 +7,11 @@ async function initialGetRequest() {
       		'Content-Type': 'application/json'
       	}
 	});
+
+  while (!response.ok) {
+    await initialGetRequest(); 
+  }
+  
 	return response.json();
 }
 
